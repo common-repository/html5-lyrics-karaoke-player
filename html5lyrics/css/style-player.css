@@ -1,0 +1,137 @@
+body { padding:0;margin:0; color: #666; font-family: sans-serif; line-height: 1.4; }
+      h1 { color: #444; font-size: 1.2em; padding: 14px 2px 12px; margin: 0px; }
+      h1 em { font-style: normal; color: #999; }
+      a { color: #888; text-decoration: none; }
+      #wrapper { width: 400px; margin: 40px auto; }
+      
+      ol { padding: 0px; margin: 0px; list-style: decimal-leading-zero inside; color: #ccc; width: 460px; border-top: 1px solid #ccc; font-size: 0.9em; }
+      ol li { position: relative; margin: 0px; padding: 9px 2px 10px; border-bottom: 1px solid #ccc; cursor: pointer; }
+      ol li a { /*display: block;*/ text-indent: -3.3ex; padding: 0px 0px 0px 1px; }
+      li.playing { color: #aaa; text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3); }
+      li.playing a { color: #000; }
+      li.playing:before { content: '♬'; width: 14px; height: 14px; padding: 3px; line-height: 14px; margin: 0px; position: absolute; left: -24px; top: 9px; color: #000; font-size: 13px; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); }
+      
+      #shortcuts { position: fixed; bottom: 0px; width: 100%; color: #666; font-size: 0.9em; margin: 60px 0px 0px; padding: 20px 20px 15px; background: #f3f3f3; background: rgba(240, 240, 240, 0.7); }
+      #shortcuts div { width: 460px; margin: 0px auto; }
+      #shortcuts h1 { margin: 0px 0px 6px; }
+      #shortcuts p { margin: 0px 0px 18px; }
+      #shortcuts em { font-style: normal; background: #d3d3d3; padding: 3px 9px; position: relative; left: -3px;
+        -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); }
+
+      @media screen and (max-device-width: 480px) {
+        #wrapper { position: relative; left: -3%; }
+        #shortcuts { display: none; }
+      }
+	  
+	  .myFloatBarTop{
+   bottom:0;
+   padding-bottom: 32px;
+   /*left:0;*/
+   clear:both;
+   text-align:center;
+   width:100%;
+   height:60px;
+   position:fixed;
+   background-color:#58595B;
+   color:#CCCCCC;
+   /*border-bottom:5px solid #CCCCCC;*/
+}
+
+
+.myFloatBar{
+   bottom:0;
+   /*left:0;*/
+   clear:both;
+   /*text-align:center;*/
+   width:100%;
+   height:36px;
+   position:fixed;
+   background-color:#58595B;
+   border-top:5px solid #CCCCCC;
+   padding-top: 2px;
+   padding-bottom: 2px;
+}
+
+.myFloatBar1{
+   /*bottom:350px;*/
+   /*left:0;*/
+   clear:both;
+   text-align:center;
+   width:100%;
+   height:36px;
+   position:fixed;
+ 
+ 
+   padding-top: 2px;
+   padding-bottom: 2px;
+}
+
+
+#current_playlist.open {
+    bottom: 45px;
+    height: 400px;
+}
+
+#current_playlist {
+    -moz-transition: height 0.2s linear 0s;
+    background-color: #FFFFFF;
+    border-radius: 8px 8px 0 0;
+    bottom: 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.15);
+    height: 0;
+    left: 251px;
+    overflow: hidden;
+    position: absolute;
+    right: 150px;
+    z-index: 9999990;
+	display:none;
+}
+
+
+#current_playlist_header:after, #current_playlist_rows:after {
+    background: -moz-linear-gradient(center top , rgba(0, 0, 0, 0.2), transparent) repeat scroll 0 0 transparent;
+    bottom: -5px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+    content: " ";
+    display: block;
+    height: 6px;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+ 
+.current_playlist_header_item {
+    color: #F2F2F2;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px;
+    margin: 0;
+    padding: 0 15px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.45);
+} 
+ 
+#current_playlist_header {
+    /*background: -moz-linear-gradient(0% 0 270deg, #686F71, #565B5D) repeat scroll 0 0 transparent;*/
+	background: #58595B;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+    height: 40px;
+    position: relative;
+    width: 100%;
+}
+
+#current_playlist_close {
+    background: url("../images/close_icon.png") no-repeat scroll center center #666666;
+    border: 1px solid #444444;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    float: right;
+    height: 20px;
+    margin: 8px 10px 0 0;
+    opacity: 0.6;
+    width: 21px;
+    z-index: 10002;
+}
